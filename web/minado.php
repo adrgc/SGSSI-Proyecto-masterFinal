@@ -29,7 +29,7 @@ if(!isset($_SESSION['email'])){
 <body>
     <?php include("header.php"); ?>
     <br>
-    <?php include("../Otros/missioncontrol.php"); ?>
+    <?php include("missioncontrol.php"); ?>
     <label style="font-size:110%">Enlace de descarga Cliente:&nbsp</Label>
     <a style="font-size:110%; color:Green" href="https://drive.google.com/file/d/13zgVF78zk4D9wL238jcTEwvlA65jDWEh/view?usp=sharing">Descarga</a>
     <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>

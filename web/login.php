@@ -30,7 +30,7 @@ if (!isset($_SESSION)) {
 </head>
 
 <body>
-<?php include '../Otros/DbConfig.php' ?>
+<?php include 'DbConfig.php' ?>
 <div>
 <div class="login">
 	<h1>Login</h1>
@@ -39,6 +39,7 @@ if (!isset($_SESSION)) {
         <input type="password" id="pass1" name="pass1" placeholder="Password" required="required" />
         <input type="submit" id ="submit" value="Iniciar sesión" class="btn btn-primary btn-block btn-large"/>
     </form>
+    <a href="register.php"style='text-align:center; color:white'>Registrarse</a>
     <div class="g-signin2" data-onsuccess="onSignIn" style="margin: auto;width: 100%;padding-left: 32%;"> <br> 
 
     <script>

@@ -1,53 +1,58 @@
-<?PHP
-if (!isset($_SESSION)) {
-    session_start();
-}
-?>
 <!DOCTYPE html>
-<html>
-
-<?php include("top.php"); ?>
+<html lang="es">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/Style.css">
+    <meta charset="utf-8">
+    <title>Mission Control 🚀</title>
 </head>
 
 <body>
-    <?php include("header.php"); ?>
-        <h1 style="width:1000px; font-size:300%;"> Ander Gomez </h1>
-        <br>
-        <div id="left">
-            <br>
-            Ander Gomez, excelente estudiante de Ingería Informática.
-            <br>
-            <br>
-            Esta joven promesa empezó a estudiar dicha carrera en 2018, con increibles notas fue pasando de curso hasta llegar a las asignaturas donde realmente brillo,
-            las cuales se basan en diseño web o programación más avanzada. Entre estas asignaturas, se encuentran Sistemas Web, Herramientas Avanzadas de Desarrollo de Software etc. 
-            <br>
-            Entre sus cualidades, se encuentra el altruismo, siempre dispuesto a ayudar a sus compañeros; Capacidad de trabajo Equipo, en todos los grupos que ha estado, 
-            estos siempre han sido los más punteros de la clase.
-            <br>
-            Lo que más resalta de Ander Gomez, es que la Informática se ha convertido en su hobby, mientras otros salen de fiesta o juegan en el ordenador,
-            cada dia invierte horas consiguiendo mejorar lo que hizo el Ander del día anterior, lo cual le convierte en un genio.
-            <br>
-            <br>
-            Dentro de sus hazañas:
-            <br>
-            -Hackeo de la base de datos de Jose Angel Vadillo.
-            <br>
-            -Ser casi Autoridad en la Asignatura de Seguridad.
-            <br>
-            -Estar junto a Patxi Angulo Martin por 4 años consecutivos.
-            <br>
-            -Conseguir que Kimi Raikkonen le pida una foto.
-            <br><br>
-            Link de Github:
-            <a href="https://github.com/AnderGomez14">Github</a>
-        </div>
-        <div style="align:right">
-            <img style="align:right" src=" https://avatars.githubusercontent.com/u/11394877?v=4"/>
-        <div>   
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Fichero a minar
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" name="submit">
+    </form>
+    <div style="display: flex;
+    align-content: center;
+    justify-content: center;">
+        <table id="miners">
 
-    <?php include("footer.php"); ?> 
+        </table>
+        <div style="    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly
+    ">
+            <div>
+                <label for="cpu_mode">Modo de CPU:</label>
+                <select id="cpu_mode" name="cpu_mode">
+                    <option value="HRT">CPU Friendly</option>
+                    <option value="Mazepin">CPU no tan Friendly</option>
+                    <option value="Maldonado">CPU Party 🔥</option>
+                </select>
+            </div>
+            <div>
+                <label for="ceros">Numero de ceros:</label>
+                <input type="number" id="ceros" name="ceros">
+            </div>
+            <div>
+                <label for="id">ID de la pool:</label>
+                <input type="text" id="id" name="id">
+            </div>
+            <button style="width: 100%;" type="button" onclick='$.get( "clear.php", { modo: "reset"} );'>Reset 🔄️</button>
+            <button style="width: 100%;" type="button" onclick='$.get( "clear.php" );'> STOP THE COUNT! 🚩</button>
+            <button style="width: 100%;" type="button" onclick="tminus0()">LAUNCH 🚀</button>
+        </div>
+    </div>
+    <div style="
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    text-align: center;
+    ">
+        <div id="estado"></div>
+    </div>
 </body>
+
 </html>

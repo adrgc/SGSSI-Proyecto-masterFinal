@@ -1,0 +1,17 @@
+protocolos:
+	-tcp
+	
+Funcionalidades:
+	-subir arch
+	-bajar arch(anon)
+	-var lista arch
+	-borrar arch
+Distribuided propertis
+	-SI Transparency in file identification/location : no se sabe ni en que nodo ni en 
+							que carpeta estan los archivos
+	-SI Security : requiere login
+	-NO Scalability : tener en cuenta el almacenamiento de los ficheros
+	-NO Availability : solo un equipo, si se cae a tomar por culo
+	-SI Fault tolerance: se valida la entrada del cliente
+	-SI Consistency : toda la info en un equipo
+

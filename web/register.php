@@ -27,7 +27,7 @@ if (!isset($_SESSION)) {
 </head>
 
 <body>
-<?php include '../Otros/DbConfig.php' ?>
+<?php include 'DbConfig.php' ?>
 <div>
 <div class="login">
 	<h1>Registro</h1>
