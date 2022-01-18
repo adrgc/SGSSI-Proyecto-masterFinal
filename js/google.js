@@ -1,6 +1,6 @@
 
 function onSignIn(googleUser) {
-
+    window.alert("hola");
     var profile = googleUser.getBasicProfile();
     $.post('GoogleLogin.php', {
         data: profile.getEmail()+'...'+profile.getImageUrl()

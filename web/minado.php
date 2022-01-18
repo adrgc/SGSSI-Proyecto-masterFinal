@@ -1,3 +1,13 @@
+<?PHP
+if (!isset($_SESSION)) {
+  session_start();
+}
+if(!isset($_SESSION['email'])){
+  echo "<script>alert ('No puedes acceder aqui');</script>";
+  echo "<script>window.location.href='inicio.php';</script>";
+  exit(0);}
+
+?>
 <!DOCTYPE html>
 <html>
 

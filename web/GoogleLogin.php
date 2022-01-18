@@ -1,10 +1,9 @@
-<?PHP
-session_start ();
-?>
 <?php
-$data= explode("...", $_REQUEST['data']);
-$_SESSION['email'] = $data[0];
-$_SESSION['tipo'] = 4;
-$_SESSION['img'] = $data[1];
+if (!isset($_SESSION)) {
+    session_start();
+}
+    $json = file_get_contents("https://oauth2.googleapis.com/tokeninfo?id_token=" . $_POST['idtoken']);
+    $data = json_decode($json);
+    $_SESSION['email'] = $data->email;
+    $_SESSION['google'] = 'yes';
 
-?>
